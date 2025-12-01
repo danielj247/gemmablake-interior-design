@@ -1,10 +1,23 @@
+<script setup lang="ts">
+// SEO Meta
+useHead({
+  title: 'Gemma Blake Interior Design | Luxury Interiors in Worcestershire',
+  meta: [
+    {
+      name: 'description',
+      content: 'Gemma Blake Interior Design - Specialist interior design studio based in Bromsgrove, Worcestershire, specialising in high-end residential and commercial projects.'
+    }
+  ]
+})
+</script>
+
 <template>
-  <div class="relative">
+  <div>
     <NavBar />
-    <main class="pt-20">
+    <main>
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
+      <ProcessSection />
       <PortfolioSection />
       <TestimonialsSection />
       <ContactSection />
@@ -12,5 +25,4 @@
     <Footer />
   </div>
 </template>
-
 

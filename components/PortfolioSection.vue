@@ -1,83 +1,139 @@
+<script setup lang="ts">
+const sectionRef = ref<HTMLElement | null>(null)
+const isVisible = ref(false)
+
+const portfolioItems = [
+  {
+    id: 1,
+    title: 'Sutton Coldfield Residence',
+    category: 'Residential',
+    aspect: 'aspect-[4/5]'
+  },
+  {
+    id: 2,
+    title: 'Luxury Skin Clinic',
+    category: 'Commercial',
+    aspect: 'aspect-square'
+  },
+  {
+    id: 3,
+    title: 'Modern Home Extension',
+    category: 'Residential',
+    aspect: 'aspect-[4/5]'
+  },
+  {
+    id: 4,
+    title: 'Student Accommodation',
+    category: 'Commercial',
+    aspect: 'aspect-square'
+  },
+  {
+    id: 5,
+    title: 'Contemporary Living Space',
+    category: 'Residential',
+    aspect: 'aspect-[4/5]'
+  },
+  {
+    id: 6,
+    title: 'Bespoke Kitchen Design',
+    category: 'Residential',
+    aspect: 'aspect-square'
+  }
+]
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isVisible.value = true
+          observer.disconnect()
+        }
+      })
+    },
+    { threshold: 0.1 }
+  )
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+})
+</script>
+
 <template>
   <section
     id="portfolio"
-    class="border-y border-light-gray/70 bg-beige/95 px-6 py-20"
+    ref="sectionRef"
+    class="section-padding bg-white"
   >
-    <div class="mx-auto max-w-6xl space-y-10">
-      <header class="max-w-2xl space-y-4">
-        <p class="text-xs font-medium uppercase tracking-[0.25em] text-brown/70">
-          Portfolio
+    <div class="container-wide mx-auto">
+      <!-- Section Header -->
+      <div
+        class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 transition-all duration-700"
+        :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+      >
+        <p class="font-serif text-sm tracking-ultra uppercase text-gold mb-4">
+          Our Work
         </p>
-        <h2 class="font-heading text-3xl text-navy sm:text-4xl">
-          A glimpse into the calm, elevated spaces Gemma creates.
+        <h2 class="heading-lg text-navy mb-6">
+          Featured Projects
         </h2>
-        <p class="text-sm leading-relaxed text-brown/80">
-          While we build out a full project gallery, these curated stock images echo the neutral,
-          textural and layered aesthetic of Gemma&rsquo;s work.
+        <div class="divider"></div>
+        <p class="text-body text-navy/70 mt-6">
+          Explore a selection of our recent interior design projects, showcasing our commitment to creating beautiful, functional spaces.
         </p>
-      </header>
-
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <figure
-          v-for="(image, index) in images"
-          :key="index"
-          class="group relative overflow-hidden rounded-3xl bg-light-gray/40 shadow-soft"
-        >
-          <div
-            class="h-64 w-full bg-cover bg-center transition duration-500 group-hover:scale-105"
-            :style="{ backgroundImage: `url(${image.url})` }"
-          />
-          <figcaption class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/40 via-black/10 to-transparent p-4 text-sm text-beige opacity-0 transition group-hover:opacity-100">
-            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-beige/80">
-              {{ image.category }}
-            </p>
-            <p class="mt-1 font-medium">
-              {{ image.title }}
-            </p>
-          </figcaption>
-        </figure>
       </div>
 
-      <p class="text-xs text-brown/60">
-        Project photography coming soon. Stock imagery used for now while current projects are professionally documented.
-      </p>
+      <!-- Portfolio Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div
+          v-for="(item, index) in portfolioItems"
+          :key="item.id"
+          class="group cursor-pointer transition-all duration-700"
+          :class="[
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+            index % 3 === 1 ? 'lg:translate-y-8' : ''
+          ]"
+          :style="{ transitionDelay: `${(index + 1) * 100}ms` }"
+        >
+          <div class="relative overflow-hidden bg-cream">
+            <!-- Image Placeholder -->
+            <div
+              class="w-full bg-gradient-to-br from-cream-dark/40 to-cream transition-transform duration-600 group-hover:scale-105"
+              :class="item.aspect"
+            >
+              <!-- Placeholder content -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center">
+                  <svg class="w-12 h-12 mx-auto text-navy/15 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <p class="font-serif text-xs text-navy/20 tracking-widest uppercase">Coming Soon</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hover Overlay -->
+            <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center">
+              <div class="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-400">
+                <p class="font-serif text-xs tracking-ultra uppercase text-gold mb-2">{{ item.category }}</p>
+                <h3 class="font-serif text-xl lg:text-2xl tracking-wide">{{ item.title }}</h3>
+                <div class="w-8 h-px bg-gold mx-auto mt-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-400 delay-100"></div>
+              </div>
+            </div>
+
+            <!-- Corner accent -->
+            <div class="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-gold/0 group-hover:border-gold/50 transition-colors duration-400"></div>
+            <div class="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-gold/0 group-hover:border-gold/50 transition-colors duration-400"></div>
+          </div>
+
+          <!-- Item Info (below image) -->
+          <div class="pt-5">
+            <p class="font-serif text-xs tracking-ultra uppercase text-gold/70 mb-1">{{ item.category }}</p>
+            <h3 class="font-serif text-lg text-navy group-hover:text-navy/70 transition-colors duration-300">{{ item.title }}</h3>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-const images = [
-  {
-    url: 'https://images.pexels.com/photos/6588588/pexels-photo-6588588.jpeg',
-    title: 'Light-filled kitchen with warm timber and stone',
-    category: 'Residential'
-  },
-  {
-    url: 'https://images.pexels.com/photos/6585786/pexels-photo-6585786.jpeg',
-    title: 'Soft neutral bedroom with layered textures',
-    category: 'Residential'
-  },
-  {
-    url: 'https://images.pexels.com/photos/6480219/pexels-photo-6480219.jpeg',
-    title: 'Calm, welcoming clinic reception',
-    category: 'Commercial'
-  },
-  {
-    url: 'https://images.pexels.com/photos/6585763/pexels-photo-6585763.jpeg',
-    title: 'Relaxed living space with sculptural lighting',
-    category: 'Residential'
-  },
-  {
-    url: 'https://images.pexels.com/photos/6480217/pexels-photo-6480217.jpeg',
-    title: 'Minimal, modern workspace with natural light',
-    category: 'Commercial'
-  },
-  {
-    url: 'https://images.pexels.com/photos/6588597/pexels-photo-6588597.jpeg',
-    title: 'Textural styling vignette with ceramics',
-    category: 'Styling'
-  }
-]
-</script>
-
-

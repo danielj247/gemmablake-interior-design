@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Signerica Fat';
+  src: url('../fonts/SignericaFat.woff2') format('woff2'),
+       url('../fonts/SignericaFat.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base styles */
+body {
+  @apply font-sans text-gray-800 bg-white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bodoni;
+}
+

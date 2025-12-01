@@ -49,7 +49,7 @@ onMounted(() => {
     class="section-padding bg-cream relative overflow-hidden"
   >
     <!-- Decorative background -->
-    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cream-dark/20 to-transparent pointer-events-none"></div>
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cream/50 to-transparent pointer-events-none"></div>
 
     <div class="container-wide mx-auto relative z-10">
       <div class="grid lg:grid-cols-2 gap-16 lg:gap-24">

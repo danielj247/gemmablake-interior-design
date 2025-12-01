@@ -53,7 +53,7 @@ onMounted(() => {
   <section
     id="process"
     ref="sectionRef"
-    class="section-padding bg-cream"
+    class="section-padding bg-cream/30"
   >
     <div class="container-wide mx-auto">
       <!-- Section Header -->
@@ -97,7 +97,7 @@ onMounted(() => {
                 class="p-8 lg:p-10"
                 :class="index % 2 === 0 ? 'text-right' : 'text-left lg:order-2'"
               >
-                <span class="font-serif text-5xl text-gold/30 block mb-2">{{ step.number }}</span>
+                <span class="font-serif text-5xl text-gold block mb-2">{{ step.number }}</span>
                 <h3 class="heading-sm text-navy mb-4">{{ step.title }}</h3>
                 <p class="text-body text-navy/60">{{ step.description }}</p>
               </div>

@@ -7,16 +7,6 @@ const socialLinks = [
     href: 'https://instagram.com/gemmablakeinteriors',
     icon: 'instagram'
   },
-  {
-    name: 'Pinterest',
-    href: 'https://pinterest.com/gemmablakeinteriors',
-    icon: 'pinterest'
-  },
-  {
-    name: 'Houzz',
-    href: 'https://houzz.com/gemmablakeinteriors',
-    icon: 'houzz'
-  }
 ]
 
 const navLinks = [
@@ -84,7 +74,7 @@ const scrollToSection = (href: string) => {
 
         <!-- Quick Links -->
         <div>
-          <h4 class="font-serif text-sm tracking-widest uppercase text-white mb-6">Quick Links</h4>
+          <h4 class="font-serif font-semibold text-sm tracking-widest uppercase text-white mb-6">Quick Links</h4>
           <nav class="space-y-3">
             <a
               v-for="link in navLinks"
@@ -100,21 +90,21 @@ const scrollToSection = (href: string) => {
 
         <!-- Contact Info -->
         <div>
-          <h4 class="font-serif text-sm tracking-widest uppercase text-white mb-6">Contact</h4>
+          <h4 class="font-serif font-semibold text-sm tracking-widest uppercase text-white mb-6">Contact</h4>
           <div class="space-y-4">
             <a
-              href="mailto:hello@gemmablakeinteriors.co.uk"
+              href="mailto:hello@gemmablakeinteriordesign.com"
               class="block font-body text-white/60 hover:text-gold transition-colors duration-300"
             >
-              hello@gemmablakeinteriors.co.uk
+              hello@gemmablakeinteriordesign.com
             </a>
             <a
-              href="https://instagram.com/gemmablakeinteriors"
+              href="https://instagram.com/gemmablake.interiordesign"
               target="_blank"
               rel="noopener noreferrer"
               class="block font-body text-white/60 hover:text-gold transition-colors duration-300"
             >
-              @gemmablakeinteriors
+              @gemmablake.interiordesign
             </a>
             <p class="font-body text-white/60">
               Bromsgrove, Worcestershire

@@ -11,26 +11,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: '#E5D9C7',
-        'cream-light': '#F5EFE6',
-        'cream-dark': '#D4C7B5',
+        cream: '#f3eee7',
+        'cream-light': '#f7f4ef',
+        'cream-dark': '#d8cec2',
         gray: {
-          light: '#D3D3D3',
-          DEFAULT: '#A9A9A9',
-          dark: '#6B6B6B'
+          light: '#d9d4cc',
+          DEFAULT: '#b3aba0',
+          dark: '#7a7269'
         },
-        navy: '#001F3F',
-        'navy-light': '#003366',
-        brown: '#8B4513',
-        'brown-light': '#A0522D',
-        gold: '#D4AF37',
-        'gold-light': '#E6C65C',
-        'gold-dark': '#B8960F'
+        navy: '#111111',
+        'navy-light': '#2c2a28',
+        brown: '#8b7c6c',
+        'brown-light': '#a69586',
+        gold: '#b6a694',
+        'gold-light': '#cfc4b4',
+        'gold-dark': '#9c8c7b'
       },
       fontFamily: {
-        serif: ['Bodoni Moda', 'Georgia', 'serif'],
-        script: ['Cormorant Garamond', 'Georgia', 'serif'],
-        body: ['Cormorant Garamond', 'Georgia', 'serif']
+        serif: ['"Bodoni Moda"', 'serif'],
+        script: ['"Signerica Fat"', 'cursive'],
+        body: ['"Bodoni Moda"', 'serif']
       },
       spacing: {
         '18': '4.5rem',

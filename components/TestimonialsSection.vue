@@ -61,7 +61,7 @@ onMounted(() => {
         class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 transition-all duration-700"
         :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
       >
-        <p class="font-serif text-sm tracking-ultra uppercase text-gold mb-4">
+        <p class="font-serif font-bold text-sm tracking-ultra uppercase text-gold mb-4">
           Testimonials
         </p>
         <h2 class="heading-lg text-white mb-6">
@@ -101,10 +101,10 @@ onMounted(() => {
               <div class="flex items-center pt-6 border-t border-white/10">
                 <!-- Avatar placeholder -->
                 <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mr-4">
-                  <span class="font-serif text-lg text-gold">{{ testimonial.name.charAt(0) }}</span>
+                  <span class="font-serif font-semibold text-lg text-gold">{{ testimonial.name.charAt(0) }}</span>
                 </div>
                 <div>
-                  <p class="font-serif text-white tracking-wide">{{ testimonial.name }}</p>
+                  <p class="font-serif font-semibold text-white tracking-wide">{{ testimonial.name }}</p>
                   <p class="font-body text-sm text-white/50">{{ testimonial.location }}</p>
                 </div>
               </div>

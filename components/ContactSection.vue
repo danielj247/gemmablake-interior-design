@@ -12,14 +12,14 @@ const contactInfo = [
   {
     icon: 'email',
     label: 'Email',
-    value: 'hello@gemmablakeinteriors.co.uk',
-    href: 'mailto:hello@gemmablakeinteriors.co.uk'
+    value: 'hello@gemmablakeinteriordesign.com',
+    href: 'mailto:hello@gemmablakeinteriordesign.com'
   },
   {
     icon: 'instagram',
     label: 'Instagram',
-    value: '@gemmablakeinteriors',
-    href: 'https://instagram.com/gemmablakeinteriors'
+    value: '@gemmablake.interiordesign',
+    href: 'https://instagram.com/gemmablake.interiordesign'
   }
 ]
 
@@ -58,7 +58,7 @@ onMounted(() => {
           class="transition-all duration-700"
           :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'"
         >
-          <p class="font-serif text-sm tracking-ultra uppercase text-gold mb-4">
+          <p class="font-serif font-bold text-sm tracking-ultra uppercase text-gold mb-4">
             Get In Touch
           </p>
           <h2 class="heading-lg text-navy mb-6">
@@ -100,7 +100,7 @@ onMounted(() => {
                 </svg>
               </div>
               <div>
-                <p class="font-serif text-xs tracking-widest uppercase text-navy/40 mb-0.5">{{ item.label }}</p>
+                <p class="font-serif font-semibold text-xs tracking-widest uppercase text-navy/40 mb-0.5">{{ item.label }}</p>
                 <p class="font-body text-navy group-hover:text-gold transition-colors duration-300">{{ item.value }}</p>
               </div>
             </a>
@@ -117,7 +117,7 @@ onMounted(() => {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <div>
-                <p class="font-serif text-sm tracking-widest uppercase text-navy/40 mb-1">Location</p>
+                <p class="font-serif font-semibold text-sm tracking-widest uppercase text-navy/40 mb-1">Location</p>
                 <p class="font-body text-navy">Bromsgrove, Worcestershire</p>
                 <p class="font-body text-sm text-navy/60 mt-1">Serving clients across the Midlands and beyond</p>
               </div>
@@ -136,8 +136,10 @@ onMounted(() => {
             <div class="absolute top-4 right-4 w-24 h-24 border border-gold/20"></div>
 
             <div class="relative z-10 flex-1 flex flex-col">
-              <span class="font-serif text-xs tracking-ultra uppercase text-gold mb-2">Exclusive Offer</span>
+              <span class="font-serif font-bold text-xs tracking-ultra uppercase text-gold mb-2">Exclusive Offer</span>
               <h3 class="heading-md text-navy mb-4">Two-Hour Consultation</h3>
+
+              
               <div class="w-12 h-px bg-gold mb-6"></div>
 
               <p class="text-body text-navy/70 mb-6">
@@ -171,12 +173,27 @@ onMounted(() => {
                 </div>
               </div>
 
+              
+
+
               <!-- CTA Button -->
               <a
-                href="mailto:hello@gemmablakeinteriors.co.uk?subject=Two-Hour Consultation Request"
-                class="btn-gold w-full text-center"
+                href="mailto:hello@gemmablakeinteriordesign.com?subject=Two-Hour Consultation Request"
+                class="flex flex-col md:flex-row items-center justify-between btn-gold p-2"
               >
-                Book Your Consultation
+                <div class="font-extrabold w-full text-center">
+                  Book Your Consultation
+                </div>
+
+                <!-- Price Display -->
+                <div class="flex items-center p-1">
+                  <div class="bg-gold-light/10 border-2 border-gold/30 px-6 py-3">
+                    <div class="flex items-baseline">
+                      <span class="font-serif text-2xl font-bold text-gold mr-1">£</span>
+                      <span class="font-serif text-4xl font-bold text-white">250</span>
+                    </div>
+                  </div>
+                </div>
               </a>
 
               <p class="text-center font-body text-sm text-navy/50 mt-4">

@@ -8,7 +8,7 @@
   }
   
   body {
-    @apply font-body text-navy antialiased;
+    @apply font-body text-navy bg-cream-light antialiased;
     font-size: 18px;
     line-height: 1.75;
   }
@@ -18,7 +18,7 @@
   }
 
   ::selection {
-    @apply bg-gold/30 text-navy;
+    @apply bg-gold/25 text-navy;
   }
 }
 
@@ -48,7 +48,7 @@
   }
 
   .heading-sm {
-    @apply text-xl md:text-2xl font-serif font-medium tracking-wide;
+    @apply text-xl md:text-2xl font-serif font-semibold tracking-wide;
   }
 
   .text-body {
@@ -60,18 +60,18 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-navy text-white font-serif text-sm tracking-widest uppercase 
-           transition-all duration-400 hover:bg-navy-light hover:shadow-lg;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-gold text-navy font-serif font-semibold text-sm tracking-widest uppercase
+           transition-all duration-400 hover:bg-gold-dark hover:shadow-lg;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy text-navy font-serif text-sm tracking-widest uppercase 
-           transition-all duration-400 hover:bg-navy hover:text-white;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy text-navy font-serif font-semibold text-sm tracking-widest uppercase
+           transition-all duration-400 hover:bg-navy hover:text-cream-light;
   }
 
   .btn-gold {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-gold text-navy font-serif text-sm tracking-widest uppercase 
-           transition-all duration-400 hover:bg-gold-light hover:shadow-lg;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-navy text-cream-light font-serif font-semibold text-sm tracking-widest uppercase
+           transition-all duration-400 hover:bg-navy-light hover:shadow-lg;
   }
 
   .divider {

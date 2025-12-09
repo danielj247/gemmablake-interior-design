@@ -5,45 +5,45 @@ const isVisible = ref(false)
 const portfolioItems = [
   {
     id: 1,
-    title: 'Sutton Coldfield Residence',
+    title: '116 Sutton Coldfield',
     category: 'Residential',
     aspect: 'aspect-[4/5]',
     image: '/images/portfolio/1.jpg'
   },
   {
     id: 2,
-    title: 'Luxury Skin Clinic',
-    category: 'Commercial',
+    title: '116 Sutton Coldfield',
+    category: 'Residential',
     aspect: 'aspect-square',
     image: '/images/portfolio/2.jpg'
   },
   {
     id: 3,
-    title: 'Modern Home Extension',
+    title: '142 Solihull',
     category: 'Residential',
     aspect: 'aspect-[4/5]',
     image: '/images/portfolio/3.jpg'
   },
   {
     id: 4,
-    title: 'Student Accommodation',
-    category: 'Commercial',
+    title: '142 Solihull',
+    category: 'Residential',
     aspect: 'aspect-square',
     image: '/images/portfolio/4.jpg'
   },
   {
     id: 5,
-    title: 'Contemporary Living Space',
+    title: '142 Solihull',
     category: 'Residential',
     aspect: 'aspect-[4/5]',
     image: '/images/portfolio/5.jpg'
   },
   {
     id: 6,
-    title: 'Bespoke Kitchen Design',
+    title: '22 Edgbaston',
     category: 'Residential',
     aspect: 'aspect-square',
-    image: '/images/portfolio/6.png'
+    image: '/images/portfolio/6.jpg'
   }
 ]
 
@@ -78,7 +78,7 @@ onMounted(() => {
         class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 transition-all duration-700"
         :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
       >
-        <p class="font-serif text-sm tracking-ultra uppercase text-gold mb-4">
+        <p class="font-serif font-bold text-sm tracking-ultra uppercase text-gold mb-4">
           Our Work
         </p>
         <h2 class="heading-lg text-navy mb-6">
@@ -123,8 +123,8 @@ onMounted(() => {
             <!-- Hover Overlay -->
             <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center">
               <div class="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-400">
-                <p class="font-serif text-xs tracking-ultra uppercase text-gold mb-2">{{ item.category }}</p>
-                <h3 class="font-serif text-xl lg:text-2xl tracking-wide">{{ item.title }}</h3>
+                <p class="font-serif font-semibold text-xs tracking-ultra uppercase text-gold mb-2">{{ item.category }}</p>
+                <h3 class="font-serif font-semibold text-xl lg:text-2xl tracking-wide">{{ item.title }}</h3>
                 <div class="w-8 h-px bg-gold mx-auto mt-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-400 delay-100"></div>
               </div>
             </div>
@@ -136,8 +136,8 @@ onMounted(() => {
 
           <!-- Item Info (below image) -->
           <div class="pt-5">
-            <p class="font-serif text-xs tracking-ultra uppercase text-gold/70 mb-1">{{ item.category }}</p>
-            <h3 class="font-serif text-lg text-navy group-hover:text-navy/70 transition-colors duration-300">{{ item.title }}</h3>
+            <p class="font-serif font-semibold text-xs tracking-ultra uppercase text-gold/70 mb-1">{{ item.category }}</p>
+            <h3 class="font-serif font-semibold text-lg text-navy group-hover:text-navy/70 transition-colors duration-300">{{ item.title }}</h3>
           </div>
         </div>
       </div>

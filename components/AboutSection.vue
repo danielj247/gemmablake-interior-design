@@ -59,7 +59,7 @@ onMounted(() => {
           :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'"
         >
           <!-- Section Label -->
-          <p class="font-serif text-sm tracking-ultra uppercase text-gold mb-4">
+          <p class="font-serif font-bold text-sm tracking-ultra uppercase text-gold mb-4">
             About Me
           </p>
 
@@ -91,15 +91,15 @@ onMounted(() => {
           <!-- Stats/Features -->
           <div class="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-cream-dark/30">
             <div class="text-center">
-              <p class="font-serif text-3xl md:text-4xl text-navy mb-1">3+</p>
+              <p class="font-serif font-semibold text-3xl md:text-4xl text-navy mb-1">3+</p>
               <p class="font-body text-sm text-navy/50 tracking-wide uppercase">Years Experience</p>
             </div>
             <div class="text-center">
-              <p class="font-serif text-3xl md:text-4xl text-navy mb-1">50+</p>
+              <p class="font-serif font-semibold text-3xl md:text-4xl text-navy mb-1">50+</p>
               <p class="font-body text-sm text-navy/50 tracking-wide uppercase">Projects</p>
             </div>
             <div class="text-center">
-              <p class="font-serif text-3xl md:text-4xl text-navy mb-1">100%</p>
+              <p class="font-serif font-semibold text-3xl md:text-4xl text-navy mb-1">100%</p>
               <p class="font-body text-sm text-navy/50 tracking-wide uppercase">Satisfaction</p>
             </div>
           </div>

@@ -61,7 +61,7 @@ onMounted(() => {
         class="text-center max-w-3xl mx-auto mb-16 lg:mb-24 transition-all duration-700"
         :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
       >
-        <p class="font-serif text-sm tracking-ultra uppercase text-gold mb-4">
+        <p class="font-serif font-bold text-sm tracking-ultra uppercase text-gold mb-4">
           Our Process
         </p>
         <h2 class="heading-lg text-navy mb-6">
@@ -97,7 +97,7 @@ onMounted(() => {
                 class="p-8 lg:p-10"
                 :class="index % 2 === 0 ? 'text-right' : 'text-left lg:order-2'"
               >
-                <span class="font-serif text-5xl text-gold block mb-2">{{ step.number }}</span>
+                <span class="font-serif font-semibold text-5xl text-gold block mb-2">{{ step.number }}</span>
                 <h3 class="heading-sm text-navy mb-4">{{ step.title }}</h3>
                 <p class="text-body text-navy/60">{{ step.description }}</p>
               </div>
@@ -116,7 +116,7 @@ onMounted(() => {
               <!-- Number -->
               <div class="flex-shrink-0">
                 <div class="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center border border-gold/30">
-                  <span class="font-serif text-lg text-gold">{{ step.number }}</span>
+                  <span class="font-serif font-semibold text-lg text-gold">{{ step.number }}</span>
                 </div>
                 <!-- Connecting line -->
                 <div

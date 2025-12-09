@@ -42,7 +42,7 @@ onUnmounted(() => {
     :class="[
       isScrolled || isMobileMenuOpen
         ? 'bg-cream-light/95 backdrop-blur-md shadow-sm'
-        : 'bg-transparent'
+        : 'from-cream-light/50 to-transparent bg-gradient-to-b backdrop-blur-sm'
     ]"
   >
     <div class="container-wide mx-auto px-6 lg:px-12">
@@ -50,10 +50,10 @@ onUnmounted(() => {
         <!-- Logo -->
         <a
           href="#"
-          class="font-script text-2xl lg:text-3xl text-navy tracking-wide transition-opacity hover:opacity-70"
+          class="flex items-center space-x-3 transition-opacity hover:opacity-80"
           @click.prevent="scrollToSection('#hero')"
         >
-          Gemma Blake
+          <img src="/images/logo.png" alt="Gemma Blake Interior Design" class="h-8 md:h-10 w-auto drop-shadow">
         </a>
 
         <!-- Desktop Navigation -->
@@ -62,7 +62,7 @@ onUnmounted(() => {
             v-for="link in navLinks"
             :key="link.name"
             :href="link.href"
-            class="font-serif text-sm tracking-widest uppercase text-navy/80 hover:text-navy transition-colors duration-300 relative group"
+            class="font-serif text-sm tracking-widest uppercase text-navy/80 hover:text-navy font-semibold transition-colors duration-300 relative group"
             @click.prevent="scrollToSection(link.href)"
           >
             {{ link.name }}
@@ -111,7 +111,7 @@ onUnmounted(() => {
               v-for="(link, index) in navLinks"
               :key="link.name"
               :href="link.href"
-              class="font-serif text-lg tracking-widest uppercase text-navy/80 hover:text-navy transition-colors duration-300 animate-fade-in-up"
+              class="font-serif font-semibold text-lg tracking-widest uppercase text-navy/80 hover:text-navy transition-colors duration-300 animate-fade-in-up"
               :style="{ animationDelay: `${index * 50}ms` }"
               @click.prevent="scrollToSection(link.href)"
             >

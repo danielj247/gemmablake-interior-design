@@ -69,9 +69,9 @@ onMounted(() => {
 
       <!-- Tagline -->
       <p
-        class="font-serif text-xl md:text-2xl lg:text-3xl text-navy/90 font-semibold tracking-wide mb-12 transition-all duration-700 delay-500 w-3/4 mx-auto"
+        class="font-serif text-xl sm:text-2xl md:text-3xl text-navy/90 font-semibold tracking-wide mb-12 transition-all duration-700 delay-500 w-3/4 mx-auto"
       >
-        Calm, timeless interiors in a refined taupe and greige palette
+        Timeless, Luxurious Interiors
       </p>
 
       <!-- Location -->

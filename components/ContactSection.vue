@@ -52,10 +52,10 @@ onMounted(() => {
     <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cream/50 to-transparent pointer-events-none"></div>
 
     <div class="container-wide mx-auto relative z-10">
-      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24">
+      <div class="lg:grid lg:grid-cols-2 gap-16 lg:gap-24">
         <!-- Left Column - Content -->
         <div
-          class="transition-all duration-700"
+          class="transition-all duration-700 w-full"
           :class="isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'"
         >
           <p class="font-serif font-bold text-sm tracking-ultra uppercase text-gold mb-4">
@@ -83,7 +83,7 @@ onMounted(() => {
               :style="{ transitionDelay: `${(index + 2) * 100}ms` }"
             >
               <!-- Icon -->
-              <div class="w-12 h-12 bg-navy/5 rounded-full flex items-center justify-center mr-4 group-hover:bg-gold/20 transition-colors duration-300">
+              <div class="w-12 h-12 bg-navy/5 rounded-full flex items-center justify-center mr-4 group-hover:bg-gold/20 transition-colors duration-300 flex-shrink-0">
                 <!-- Phone Icon -->
                 <svg v-if="item.icon === 'phone'" class="w-5 h-5 text-navy/60 group-hover:text-gold transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -99,9 +99,9 @@ onMounted(() => {
                   <circle cx="18" cy="6" r="1" fill="currentColor"/>
                 </svg>
               </div>
-              <div>
+              <div class="min-w-0 flex-1">
                 <p class="font-serif font-semibold text-xs tracking-widest uppercase text-navy/40 mb-0.5">{{ item.label }}</p>
-                <p class="font-body text-navy group-hover:text-gold transition-colors duration-300">{{ item.value }}</p>
+                <p class="font-body text-navy group-hover:text-gold transition-colors duration-300 break-words">{{ item.value }}</p>
               </div>
             </a>
           </div>
@@ -173,20 +173,27 @@ onMounted(() => {
                 </div>
               </div>
 
-              
-
+               <!-- Price Display -->
+                <div class="flex items-center justify-end mb-2">
+                  <div class="bg-gold-light/10 border-2 border-gold/30 px-6 py-3">
+                    <div class="flex items-baseline">
+                      <span class="font-serif text-2xl font-bold text-gold mr-1">£</span>
+                      <span class="font-serif text-4xl font-bold text-navy">250</span>
+                    </div>
+                  </div>
+                </div>
 
               <!-- CTA Button -->
               <a
                 href="mailto:hello@gemmablakeinteriordesign.com?subject=Two-Hour Consultation Request"
-                class="flex flex-col md:flex-row items-center justify-between btn-gold p-2"
+                class="flex flex-col md:flex-row items-center justify-between btn-gold py-6 md:p-2"
               >
                 <div class="font-extrabold w-full text-center">
                   Book Your Consultation
                 </div>
 
                 <!-- Price Display -->
-                <div class="flex items-center p-1">
+                <div class="flex items-center p-1 hidden md:block">
                   <div class="bg-gold-light/10 border-2 border-gold/30 px-6 py-3">
                     <div class="flex items-baseline">
                       <span class="font-serif text-2xl font-bold text-gold mr-1">£</span>

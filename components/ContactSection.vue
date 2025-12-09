@@ -174,7 +174,7 @@ onMounted(() => {
               </div>
 
                <!-- Price Display -->
-                <div class="flex items-center justify-end mb-2">
+                <div class="flex items-center justify-end mb-2 block md:hidden">
                   <div class="bg-gold-light/10 border-2 border-gold/30 px-6 py-3">
                     <div class="flex items-baseline">
                       <span class="font-serif text-2xl font-bold text-gold mr-1">£</span>

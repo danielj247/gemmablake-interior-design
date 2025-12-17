@@ -30,7 +30,8 @@ export default {
       fontFamily: {
         serif: ['"Bodoni Moda"', 'serif'],
         script: ['"Signerica Fat"', 'cursive'],
-        body: ['"Bodoni Moda"', 'serif']
+        body: ['"Bodoni Moda"', 'serif'],
+        "serif-alt": ['"Cantata One"', 'serif']
       },
       spacing: {
         '18': '4.5rem',

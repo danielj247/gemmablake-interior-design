@@ -41,7 +41,7 @@ onMounted(() => {
     </div>
 
     <!-- Content -->
-    <div class="relative z-30 text-center px-6 max-w-5xl mx-auto bg-white/40 p-30 backdrop-blur-[8px] transition-all duration-700 delay-300" :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'">
+    <div class="relative z-30 text-center px-6 max-w-5xl mx-auto bg-white/40 py-16 backdrop-blur-[8px] transition-all duration-700 delay-300" :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'">
 
       <!-- Subtitle -->
       <p
@@ -58,7 +58,7 @@ onMounted(() => {
         <img
           src="/images/logo.png"
           alt="Gemma Blake Interior Design"
-          class="mx-auto max-w-[620px] w-4/5 md:w-3/4 drop-shadow-2xl"
+          class="mx-auto max-w-[500px] w-4/5 md:w-3/4 drop-shadow-2xl"
         >
       </div>
 
@@ -76,7 +76,7 @@ onMounted(() => {
 
       <!-- Location -->
       <p
-        class="font-body text-base md:text-lg text-navy/70 tracking-widest uppercase transition-all duration-700 delay-600"
+        class="font-serif-alt text-base md:text-lg text-navy/70 tracking-widest uppercase transition-all duration-700 delay-600"
       >
         Bromsgrove, Worcestershire
       </p>

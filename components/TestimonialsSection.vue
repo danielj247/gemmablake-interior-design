@@ -7,7 +7,7 @@ const testimonials = [
     id: 1,
     name: 'Kay',
     location: 'Sutton Coldfield',
-    quote: 'Gemma Exceeded All Expectations! We initially brought Gemma on board for a full refurbishment of our Skin Clinic, a highly complex project with extremely tight deadlines. From day one, Gemma was nothing short of exceptional—professional, solution-focused, and incredibly organized. Beyond her outstanding project management skills, Gemma\'s design expertise completely transformed our clinic. We receive endless compliments on how stunning the space looks. Our home now looks like something straight out of a magazine. If you\'re considering an interior designer, we can\'t recommend Gemma highly enough.',
+    quote: 'Gemma Exceeded All Expectations! We initially brought Gemma on board for a full refurbishment of our Skin Clinic, a highly complex project with extremely tight deadlines. From day one, Gemma was nothing short of exceptional—professional, solution-focused, and incredibly organized. Beyond her outstanding project management skills, Gemma\'s design expertise completely transformed our clinic. Our experience was so fantastic that we didn’t hesitate to bring Gemma back for our home extension. We receive endless compliments on how stunning the space looks. Our home now looks like something straight out of a magazine. If you\'re considering an interior designer, we can\'t recommend Gemma highly enough.',
     featured: true
   },
   {
@@ -61,10 +61,10 @@ onMounted(() => {
         class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 transition-all duration-700"
         :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
       >
-        <p class="font-serif font-bold text-sm tracking-ultra uppercase text-gold mb-4">
+        <p class="font-serif-alt font-bold text-sm tracking-ultra uppercase text-gold mb-4">
           Testimonials
         </p>
-        <h2 class="heading-lg text-white mb-6">
+        <h2 class="heading-lg font-serif-alt font-thin text-white mb-6">
           What Our Clients Say
         </h2>
         <div class="w-20 h-px bg-gold mx-auto"></div>
@@ -93,19 +93,19 @@ onMounted(() => {
             <!-- Content -->
             <div class="relative z-10 pt-8">
               <!-- Quote text -->
-              <p class="text-body text-white/80 mb-8 line-clamp-6 lg:line-clamp-none">
-                "{{ testimonial.quote }}"
+              <p class="text-body text-white/80 mb-8 line-clamp-6 lg:line-clamp-none font-serif-alt">
+                {{ testimonial.quote }}
               </p>
 
               <!-- Author -->
               <div class="flex items-center pt-6 border-t border-white/10">
                 <!-- Avatar placeholder -->
                 <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mr-4">
-                  <span class="font-serif font-semibold text-lg text-gold">{{ testimonial.name.charAt(0) }}</span>
+                  <span class="font-serif-alt font-bold text-lg text-gold">{{ testimonial.name.charAt(0) }}</span>
                 </div>
                 <div>
-                  <p class="font-serif font-semibold text-white tracking-wide">{{ testimonial.name }}</p>
-                  <p class="font-body text-sm text-white/50">{{ testimonial.location }}</p>
+                  <p class="font-serif-alt font-medium text-white tracking-wide">{{ testimonial.name }}</p>
+                  <p class="font-serif-alt font-medium text-sm font-bold text-white/50">{{ testimonial.location }}</p>
                 </div>
               </div>
             </div>

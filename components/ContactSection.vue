@@ -4,12 +4,6 @@ const isVisible = ref(false)
 
 const contactInfo = [
   {
-    icon: 'phone',
-    label: 'Phone',
-    value: '+44 (0) 7XXX XXX XXX',
-    href: 'tel:+447XXXXXXXXX'
-  },
-  {
     icon: 'email',
     label: 'Email',
     value: 'hello@gemmablakeinteriordesign.com',
@@ -197,15 +191,11 @@ onMounted(() => {
                   <div class="bg-gold-light/10 border-2 border-gold/30 px-6 py-3">
                     <div class="flex items-baseline">
                       <span class="font-serif text-2xl font-bold text-gold mr-1">£</span>
-                      <span class="font-serif text-4xl font-bold text-white">250</span>
+                      <span class="font-serif text-4xl font-bold text-white">175</span>
                     </div>
                   </div>
                 </div>
               </a>
-
-              <p class="text-center font-body text-sm text-navy/50 mt-4">
-                Or call to discuss your project
-              </p>
             </div>
           </div>
         </div>

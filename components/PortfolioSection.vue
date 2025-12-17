@@ -44,6 +44,13 @@ const portfolioItems = [
     category: 'Residential',
     aspect: 'aspect-square',
     image: '/images/portfolio/6.jpg'
+  },
+  {
+    id: 7,
+    title: 'FIJI Skin Clinic',
+    category: 'Commercial',
+    aspect: 'aspect-square',
+    image: '/images/portfolio/7.png'
   }
 ]
 

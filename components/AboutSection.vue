@@ -36,16 +36,7 @@ onMounted(() => {
         >
           <!-- Image placeholder with elegant frame -->
           <div class="relative aspect-[4/5] bg-cream overflow-hidden">
-            <img src="/images/about-me/me.jpg" alt="About Me" class="w-full h-full object-cover">
-            <!-- Placeholder pattern -->
-            <!-- <div class="absolute inset-0 bg-gradient-to-br from-cream-dark/30 to-cream flex items-center justify-center">
-              <div class="text-center">
-                <svg class="w-16 h-16 mx-auto text-navy/20 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p class="font-serif text-sm text-navy/30 tracking-widest uppercase">Portrait Image</p>
-              </div>
-            </div> -->
+            <img src="/images/about-me/gemma.png" alt="About Me" class="w-full h-full object-cover">
             <!-- Decorative frame -->
             <div class="absolute inset-4 border border-gold/70 pointer-events-none"></div>
           </div>

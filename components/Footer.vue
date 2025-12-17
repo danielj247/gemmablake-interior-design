@@ -34,10 +34,15 @@ const scrollToSection = (href: string) => {
         <div class="lg:col-span-2">
           <a
             href="#hero"
-            class="font-script text-3xl text-white tracking-wide inline-block mb-6 hover:text-gold transition-colors duration-300"
+            class="font-script text-3xl text-white tracking-wide inline-block mb-6 hover:text-gold transition-colors duration-300 bg-cream-light p-4 rounded-md"
             @click.prevent="scrollToSection('#hero')"
           >
-            Gemma Blake
+            <span class="sr-only">Gemma Blake Interior Design</span>
+            <img
+              src="/images/logo.png"
+              alt="Gemma Blake Interior Design"
+              class="w-[200px]"
+            >
           </a>
           <p class="text-body text-white/60 max-w-md mb-6">
             Specialist interior design studio based in Bromsgrove, Worcestershire, crafting timeless, luxurious homes tailored to each client's individual needs.
